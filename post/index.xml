@@ -8,30 +8,30 @@
     <language>en-US</language>
     <lastBuildDate>Mon, 11 Jan 2021 16:00:09 +0000</lastBuildDate><atom:link href="https://rvhaasen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Creating a website with hugo</title>
-      <link>https://rvhaasen.github.io/creating-a-website-with-hugo/</link>
+      <title>Creating a website with Hugo</title>
+      <link>https://rvhaasen.github.io/post/creating-a-website-with-hugo/</link>
       <pubDate>Mon, 11 Jan 2021 16:00:09 +0000</pubDate>
       
-      <guid>https://rvhaasen.github.io/creating-a-website-with-hugo/</guid>
-      <description></description>
+      <guid>https://rvhaasen.github.io/post/creating-a-website-with-hugo/</guid>
+      <description>There are many ways to create simple good-looking websites for personal usage. Until recently I put my tech-blogging in Confluence ( which is the main documentation system at my work). Work-related info should ofcourse be shielded from the outside, non-confidential subjects (&amp;lsquo;hobby projects&amp;rsquo;) could however be stored somewhere else. I bumped into &amp;lsquo;Hugo&amp;rsquo; and immediatly got enthousiastic about the concept. The result is the blogging site that you are looking at.</description>
     </item>
     
     <item>
       <title>Assembling a Prusa 3D Printer</title>
-      <link>https://rvhaasen.github.io/assembling-a-prusa-3d-printer/</link>
+      <link>https://rvhaasen.github.io/post/assembling-a-prusa-3d-printer/</link>
       <pubDate>Thu, 07 Jan 2021 17:22:49 +0000</pubDate>
       
-      <guid>https://rvhaasen.github.io/assembling-a-prusa-3d-printer/</guid>
+      <guid>https://rvhaasen.github.io/post/assembling-a-prusa-3d-printer/</guid>
       <description>Already 2 years ago I wanted to build a Prusa MK3 printer. Last years black-friday, Prusa had an interesting offer which i could not refuse!
 The box arrived last week of 2020. It took me slight more than 2 days to assemble the printer. The package contains a book with clear instructions. Having build a first one, a second printer would take much less time, I think it could then be build in about 1.</description>
     </item>
     
     <item>
       <title>Rabbit gone</title>
-      <link>https://rvhaasen.github.io/rabbit-gone/</link>
+      <link>https://rvhaasen.github.io/post/rabbit-gone/</link>
       <pubDate>Wed, 06 Jan 2021 13:15:20 +0000</pubDate>
       
-      <guid>https://rvhaasen.github.io/rabbit-gone/</guid>
+      <guid>https://rvhaasen.github.io/post/rabbit-gone/</guid>
       <description>Rabbit gone&amp;hellip; The first post on my site is a sad one :-(
 For almost 10 year our rabbit was part of the family. It survived two marter attack which killed 2 other rabbits. After 30 Decmber 2020 the rabbit somehow disappeared. Most likely it got sick, went under ground through the tunnels and died&amp;hellip;
 This makes creating blog-like websites very easy!
