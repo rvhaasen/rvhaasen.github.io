@@ -23,12 +23,12 @@
     <meta name="twitter:title" content="Creating a website with Hugo"/>
     <meta name="twitter:description" content="There are many ways to create simple good-looking websites for personal usage. Until recently I put my tech-blogging in Confluence ( which is the main documenta"/>
     <meta name="twitter:url" content="https://rvhaasen.github.io/post/creating-a-website-with-hugo/" />
-    <meta name="twitter:site" content="@faketryghost"/>
+    <meta name="twitter:site" content="@"/>
 
     <meta property="og:site_name" content="" />
-    <meta property="og:title" content="Creating a website with Hugo &middot; A collection of things i do..." />
+    <meta property="og:title" content="Creating a website with Hugo &middot; A collection of things..." />
     <meta property="og:url" content="https://rvhaasen.github.io/post/creating-a-website-with-hugo/" />
-    <meta property="article:publisher" content="https://www.facebook.com/fakeghost" />
+    
 
     <meta property="og:type" content="article" />
     <meta property="og:description" content="There are many ways to create simple good-looking websites for personal usage. Until recently I put my tech-blogging in Confluence ( which is the main documenta" />
@@ -88,13 +88,17 @@
               <a href="https://google.com/">External</a>
             </li>
         
+            <li class="" role="menuitem">
+              <a href="/cv">CV</a>
+            </li>
+        
       </ul></div>
 
       <div class="site-nav-right">
         <div class="social-links">
-                    <a class="social-link social-link-fb" href="https://www.facebook.com/fakeghost" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg></a>
+                    
 
-                    <a class="social-link social-link-tw" href="https://twitter.com/faketryghost" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg></a>
+                    
 
                     <a class="social-link" href="https://github.com/rvhaasen" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
 
@@ -135,17 +139,17 @@ The result is the blogging site that you are looking at.</p>
 <h2 id="whats-so-nice-about-hugo">Whats so nice about Hugo?</h2>
 <p>In my opinion there are many reasons:</p>
 <ul>
-<li><em>I&rsquo;m not a web-developer and want to focus on content</em><br>
+<li><strong>I&rsquo;m not a web-developer and want to focus on content</strong><br>
 In Hugo, content is written in mark-down.</li>
-<li><em>The software is opensource</em></li>
-<li><em>No need for dynamic components</em><br>
+<li><strong>The software is opensource</strong></li>
+<li><strong>Static website</strong><br>
 Hugo translates the resources into static html. This is easy to deploy to a webserver. Also there are much less security concerns (no databases that can be compromised or otherwise accessed)</li>
-<li><em>Result can directly be viewed during development</em><br>
+<li><strong>Result can directly be viewed during development</strong><br>
 For this, hugo can serve the site localy and update the result when content is added or changed. This results is a very smooth experience: just update the content from e.g. vim and immediately see the results in the browser!</li>
-<li><em>Hugo is fast</em></li>
+<li><strong>Hugo is fast</strong></li>
 </ul>
 <h2 id="cookbook">Cookbook</h2>
-<p>Like everything, there are many resources on the web how Hugo can be used.
+<p>There are many resources on the web how Hugo can be used.
 I started with following video. There are some problems when following this method, these are addressed in my &lsquo;cookbook&rsquo; section. In the video, Hugo is installed on the host. I perfer to run it from docker, this is also described in the cookbook.
 <iframe src="https://www.youtube.com/embed/c7vpcqA6SEQ?start="
         style="position: absolute; top: 0; left: 0; width: 560; height: 315;"
@@ -156,38 +160,54 @@ I started with following video. There are some problems when following this meth
 <p>After several days of exploration I got a good grip on it. There were several issues that had to be solved. These will be addressed in following sections.
 Here my cookboot how to use Hugo on Windows (same method can be used on Mac and Linux):</p>
 <ol>
-<li><em>Install Docker</em><br>
-In this way, there will be no pollution on the host. On Windows, Docker-desktop is an easy way to install docker.</li>
-<li><em>Open a shell</em><br>
-cd to where you want to store in localy.</li>
-<li><em>Start the Hugo container and get into a shell</em>
+<li>
+<p><strong>Install Docker</strong><br>
+In this way, there will be no pollution on the host. On Windows, Docker-desktop is an easy way to install docker.</p>
+</li>
+<li>
+<p><strong>Open a shell</strong>
+cd to where you want to store in localy.</p>
+</li>
+<li>
+<p><strong>Start the Hugo container and get into a shell</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd c:<span style="color:#ae81ff">\p</span>rojects
 $ mkdir blog
-docker run --name hugo --rm -it -p 1313:1313 -v <span style="color:#e6db74">${</span>pwd<span style="color:#e6db74">}</span>:/src klakegg/hugo:0.80.0-alpine shell
+$ docker run --name hugo --rm -it -p 1313:1313 -v <span style="color:#e6db74">${</span>pwd<span style="color:#e6db74">}</span>:/src 
+    klakegg/hugo:0.80.0-alpine shell
 hugo:/src$ 
 </code></pre></div></li>
-<li><em>Initialize a new site &lsquo;blog&rsquo;</em>
+<li>
+<p><strong>Initialize a new site &lsquo;blog&rsquo;</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo:/src$ hugo new site blog 
 hugo:/src$ cd blog
 </code></pre></div></li>
-<li><em>Install a theme</em><br>
-( I used &lsquo;casper-two&rsquo;)
+<li>
+<p><strong>Install a theme</strong><br>
+( I used &lsquo;casper-two&rsquo;)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo:/src$ cd themes 
 hugo:/src$ git clone &lt;your selected theme&gt;
 </code></pre></div></li>
-<li><em>Copy the config file from the example</em><br>
-Check the example configuration file &lsquo;config.toml&rsquo; in the installed theme. Copy it to the root of the new project.</li>
-<li>Run hugo in order to view the site on http://localhost:1313
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo:/src$ hugo serve
+<li>
+<p><strong>Copy the config file from the example</strong><br>
+Check the example configuration file &lsquo;config.toml&rsquo; in the installed theme. Copy it to the root of the new project.</p>
+</li>
+<li>
+<p><strong>Run hugo</strong><br>
+in order to view the site on http://localhost:1313</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo:/src$ hugo serve -D
 </code></pre></div></li>
-<li><em>Check the site</em><br>
-use the video to check things if the site does not render as expected.</li>
-<li><em>Create a second terminal connection to the container</em><br>
-(In this way, Hugo stays active in the other shell instance)
+<li>
+<p><strong>Check the site</strong><br>
+use the video to check things if the site does not render as expected.</p>
+</li>
+<li>
+<p><strong>Create a second terminal connection to the container</strong><br>
+(In this way, Hugo stays active in the other shell instance)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd c:<span style="color:#ae81ff">\p</span>rojects<span style="color:#ae81ff">\b</span>log
 $ docker exec -it hugo shell
 </code></pre></div></li>
-<li><em>Create a first blog entry</em>
+<li>
+<p><strong>Create a first blog entry</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo new post/my-first-post.md
 </code></pre></div><p>Check the video for details. Note that the blog will not be visible from the home-page. It is visible when clicking on &lsquo;posts&rsquo;</p>
 </li>
@@ -195,9 +215,9 @@ $ docker exec -it hugo shell
 <h2 id="when-the-magic-fails">When the magic fails&hellip;</h2>
 <ol>
 <li>
-<p><em>As mentioned, the latest blog is not visible on the main page</em><br>
+<p><strong>As mentioned, the latest blog is not visible on the main page</strong><br>
 The reason is because Hugo has
-been updated, this causes an issue the casper theme (author should update the theme code&hellip;)<br>
+been updated after the video, this causes an issue the casper theme (author should update the theme code&hellip;)<br>
 In order to solve it, change following line in the file &lsquo;themes\casper-two\layout\partials\post-list.html&rsquo;<br>
 from:</p>
 <pre><code>{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse &quot;Type&quot; &quot;post&quot;) }}
@@ -206,7 +226,7 @@ from:</p>
 </code></pre><p>Now the latest blog should be visible on the main page</p>
 </li>
 <li>
-<p><em>No date visible in blog list</em><br>
+<p><strong>No date visible in blog list</strong><br>
 The used theme &lsquo;casper-two&rsquo; does not seem to have a date displayed in the listing. For this add following line in the same file as above:
 change:</p>
 <pre><code>&lt;h2 class=&quot;post-card-title&quot;&gt;{{.Title}}&lt;/h2&gt;
@@ -214,6 +234,10 @@ change:</p>
 <pre><code>{{ .Date.Format &quot;January 2, 2006&quot; }}
 &lt;h2 class=&quot;post-card-title&quot;&gt;{{.Title}}&lt;/h2&gt;
 </code></pre><p>Now the dates should be displayed above the tiles (in blog list mode)</p>
+</li>
+<li>
+<p><strong>Code-blocks not rendered well on mobile devices</strong><br>
+Appearently the codeblocks do not adapt to the screen, and long lines cause problems. Best to split long lines into shorter ones and test it using developer tool ( in browser)</p>
 </li>
 </ol>
 <h2 id="manage-and-host-the-code-in-github">Manage and host the code in Github</h2>
@@ -325,8 +349,8 @@ The box arrived last week of 2020. It took me slight more than 2 days to assembl
     </section>
     <nav class="site-footer-nav">
         <a href="/">Latest Posts</a>
-        <a href="https://www.facebook.com/fakeghost" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://twitter.com/faketryghost" target="_blank" rel="noopener">Twitter</a>
+        
+        
         <a href="https://github.com/rvhaasen" target="_blank" rel="noopener">Github</a>
         
         
