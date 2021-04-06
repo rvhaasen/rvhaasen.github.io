@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>domestic on </title>
+    <title>domestic on A collection of things</title>
     <link>https://rvhaasen.github.io/categories/domestic/</link>
-    <description>Recent content in domestic on </description>
+    <description>Recent content in domestic on A collection of things</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
+    <language>en-us</language>
     <lastBuildDate>Wed, 06 Jan 2021 13:15:20 +0000</lastBuildDate><atom:link href="https://rvhaasen.github.io/categories/domestic/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rabbit gone</title>
-      <link>https://rvhaasen.github.io/post/rabbit-gone/</link>
+      <link>https://rvhaasen.github.io/post/my-first-post/</link>
       <pubDate>Wed, 06 Jan 2021 13:15:20 +0000</pubDate>
       
-      <guid>https://rvhaasen.github.io/post/rabbit-gone/</guid>
+      <guid>https://rvhaasen.github.io/post/my-first-post/</guid>
       <description>Rabbit gone&amp;hellip; The first post on my site is a sad one :-(
-For almost 10 year our rabbit was part of the family. It survived two marter attack which killed 2 other rabbits. After 30 Decmber 2020 the rabbit somehow disappeared. Most likely it got sick, went under ground through the tunnels and died&amp;hellip;
-This makes creating blog-like websites very easy!
-   Tables Are Cool     col 3 is right-aligned $1600   col 2 is centered $12   zebra stripes are neat $1    s = &amp;#34;Python syntax highlighting&amp;#34; print s </description>
+For almost 10 year our rabbit was part of the family. It survived two marter attacks where 2 other rabbits were killed. After 30 Decmber 2020 the rabbit somehow disappeared. Most likely it got sick, went under ground through the tunnels and died&amp;hellip;</description>
     </item>
     
   </channel>
