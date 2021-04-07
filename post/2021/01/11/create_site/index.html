@@ -150,6 +150,14 @@ $ docker exec -it hugo sh
 </li>
 </ol>
 <h2 id="when-the-magic-fails">When the magic fails&hellip;</h2>
+<h3 id="general">General</h3>
+<ol>
+<li><strong>Emoji&rsquo;s are not rendered by default</strong><br>
+add following line to the configuration:
+<pre><code>enableEmoji = true  
+</code></pre></li>
+</ol>
+<h3 id="specific-for-the-casper-theme">Specific for the casper-theme</h3>
 <ol>
 <li>
 <p><strong>As mentioned, the latest blog is not visible on the main page</strong><br>
@@ -178,7 +186,7 @@ Appearently the codeblocks do not adapt to the screen, and long lines cause prob
 </li>
 </ol>
 <h2 id="manage-and-host-the-code-in-github">Manage and host the code in Github</h2>
-<p>After the site is running fine localy, let hugo create the static site. The resulting files can be copied to a webserver.
+<p>After the site is running fine localy, let hugo create the static site by running &ldquo;hugo&rdquo; (parameter publishdir in config determines the output location of the generated site). The resulting files can be copied to a webserver.
 Github offers a very elegant and easy way to manage the your code and host it on your github account. If you don&rsquo;t want to have your code in the public, you can use a private repositories.<br>
 Check <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">here</a> for instructions.</p>
 <h2 id="final-thoughts">Final thoughts</h2>
