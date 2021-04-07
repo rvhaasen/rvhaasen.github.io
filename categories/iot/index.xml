@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IoT on A collection of things</title>
+    <link>https://rvhaasen.github.io/categories/iot/</link>
+    <description>Recent content in IoT on A collection of things</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Apr 2021 17:09:24 +0000</lastBuildDate><atom:link href="https://rvhaasen.github.io/categories/iot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tensorflow on RP4</title>
+      <link>https://rvhaasen.github.io/post/2021/04/06/tensorflow-on-rp4/</link>
+      <pubDate>Tue, 06 Apr 2021 17:09:24 +0000</pubDate>
+      
+      <guid>https://rvhaasen.github.io/post/2021/04/06/tensorflow-on-rp4/</guid>
+      <description>As part of the Coursera Specialization course on Tensorflow deployment, RP4 is used to demonstrate TF-lite. It it based on a somewhat older version of TF and other libraries, hence installing it on a fresh device took some effort. The object detection example asumed a RP-camera, which I did not have. I used an Intel Realsense D435 camera which required manual steps to install on the RP. There are many resources on the internet about installing TF2 on the PR, therefore I will not go into all details here, and focus on the tricky parts I bumped into.</description>
+    </item>
+    
+    <item>
+      <title>Emulating RP on Pc</title>
+      <link>https://rvhaasen.github.io/post/2021/02/22/emulating-rp-on-pc/</link>
+      <pubDate>Mon, 22 Feb 2021 10:51:44 +0000</pubDate>
+      
+      <guid>https://rvhaasen.github.io/post/2021/02/22/emulating-rp-on-pc/</guid>
+      <description>Setup One of the usecases possible with emulating RPi on a pc is to create RP images. Although Docker can be used to create images, Packer is a very interesting alternative. By using packer, the configuration for Docker and Packer can be harmonized. This gives flexibility for deploying the images, because configuration/image creation can also be used without Docker. It makes &amp;lsquo;infrastructure as code&amp;rsquo; possible. Start with an empty Pi and apply the configuration programmaticaly.</description>
+    </item>
+    
+  </channel>
+</rss>

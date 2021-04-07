@@ -11,7 +11,7 @@
 <meta property="og:description" content="Ricks Personal blog about everything" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rvhaasen.github.io/post/" />
-<meta property="og:updated_time" content="2021-01-11T16:00:09+00:00" />
+<meta property="og:updated_time" content="2021-04-06T17:09:24+00:00" />
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -63,6 +63,38 @@
 	<header class="main__header">
 		<h1 class="main__title">Posts</h1>
 	</header><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/2021/04/06/tensorflow-on-rp4/" rel="bookmark">
+			Tensorflow on RP4
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-04-06T17:09:24Z">April 06, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/deeplearning/" rel="category">DeepLearning</a>, <a class="meta__link" href="/categories/iot/" rel="category">IoT</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		As part of the Coursera Specialization course on Tensorflow deployment, RP4 is used to demonstrate TF-lite. It it based on a somewhat older version of TF and other libraries, hence installing it on a fresh device took some effort. The object detection example asumed a RP-camera, which I did not have. I used an Intel Realsense D435 camera which required manual steps to install on the RP. There are many resources on the internet about installing TF2 on the PR, therefore I will not go into all details here, and focus on the tricky parts I bumped into.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/2021/02/22/emulating-rp-on-pc/" rel="bookmark">
+			Emulating RP on Pc
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-02-22T10:51:44Z">February 22, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/iot/" rel="category">IoT</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Setup One of the usecases possible with emulating RPi on a pc is to create RP images. Although Docker can be used to create images, Packer is a very interesting alternative. By using packer, the configuration for Docker and Packer can be harmonized. This gives flexibility for deploying the images, because configuration/image creation can also be used without Docker. It makes &lsquo;infrastructure as code&rsquo; possible. Start with an empty Pi and apply the configuration programmaticaly.
+	</div>
+</article><article class="list__item post">
 	<header class="list__header">
 		<h2 class="list__title post__title">
 			<a href="/post/2021/01/11/create_site/" rel="bookmark">
@@ -127,6 +159,8 @@ For almost 10 year our rabbit was part of the family. It survived two marter att
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/2021/04/06/tensorflow-on-rp4/">Tensorflow on RP4</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/2021/02/22/emulating-rp-on-pc/">Emulating RP on Pc</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/2021/01/11/create_site/">Creating a website with Hugo</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/2021/01/07/assembling-a-prusa-3d-printer/">Assembling a Prusa 3D Printer</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/my-first-post/">Rabbit gone</a></li>
@@ -138,9 +172,21 @@ For almost 10 year our rabbit was part of the family. It survived two marter att
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
+				<a class="widget__link" href="/categories/deeplearning/">DeepLearning</a>
+			</li>
+			<li class="widget__item">
 				<a class="widget__link" href="/categories/domestic/">domestic</a>
 			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/iot/">IoT</a>
+			</li>
 		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/raspberry-pi/" title="Raspberry Pi">Raspberry Pi</a>
 	</div>
 </div>
 </aside>

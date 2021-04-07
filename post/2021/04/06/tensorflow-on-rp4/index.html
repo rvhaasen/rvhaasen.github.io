@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tensorflow on RP4 - A collection of things</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Tensorflow on RP4" />
+<meta property="og:description" content="As part of the Coursera Specialization course on Tensorflow deployment, RP4 is used to demonstrate TF-lite. It it based on a somewhat older version of TF and other libraries, hence installing it on a fresh device took some effort. The object detection example asumed a RP-camera, which I did not have. I used an Intel Realsense D435 camera which required manual steps to install on the RP. There are many resources on the internet about installing TF2 on the PR, therefore I will not go into all details here, and focus on the tricky parts I bumped into." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rvhaasen.github.io/post/2021/04/06/tensorflow-on-rp4/" />
+<meta property="article:published_time" content="2021-04-06T17:09:24+00:00" />
+<meta property="article:modified_time" content="2021-04-06T17:09:24+00:00" />
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="A collection of things" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">A collection of things</div>
+					<div class="logo__tagline">Rick&#39;s blogs</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About me</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Tensorflow on RP4</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-04-06T17:09:24Z">April 06, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/deeplearning/" rel="category">DeepLearning</a>, <a class="meta__link" href="/categories/iot/" rel="category">IoT</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<p>As part of the Coursera Specialization course on Tensorflow deployment, RP4 is used to demonstrate TF-lite. It it based on a somewhat older version of TF and other libraries, hence installing it on a fresh device took some effort. The object detection example asumed a RP-camera, which I did not have. I used an Intel Realsense D435 camera which required manual steps to install on the RP.
+<img src="/uploads/object_detection_on_rp4.jpg" alt="Object detection with TF-lite on RP4">
+There are many resources on the internet about installing TF2 on the PR, therefore I will not go into all details here, and focus on the tricky parts I bumped into.</p>
+<h2 id="preparing-the-rp">Preparing the RP</h2>
+<p>Because the object detection example requires video, I installed the &ldquo;Raspberry Pi Desktop&rdquo; image. This version will create a desktop environment. This desktop will be used fron a VNC client on the host laptop. In order to set things up properly, following yt can help (details at the end of the video)
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/kxtT8PjPBik" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+Upgrade apt to be up-to-date</p>
+<h2 id="installing-tensorflow">Installing Tensorflow</h2>
+<p>There are several ways to install TF on the RP. If only inference is relevant (which is mostly the case), installing the TF-interperter is sufficient. If more interaction with TF is required, full TF needs to be installed.</p>
+<h3 id="cross-compiling-tf">Cross-compiling TF</h3>
+<p>The prefered way to compile TF is to crosscompile it on a faster system. The resulting .whl file can then be copied on the RP where it can be installed with pip. I xcompiled it on my DeskMini pc (Core i5 16 GB) which took about 4 hours.
+Although the resulting wheel could be transfered to the RP in order to install it there, I choose next approach:</p>
+<h3 id="install-comunity-maintained-wheel-package">Install comunity maintained wheel package</h3>
+<p>Follow the instructions in :
+<a href="https://www.bitsy.ai/3-ways-to-install-tensorflow-on-raspberry-pi/">community maintained weel package</a>
+in order to install the package. Instead of using 2.4RC2, use 2.4, it is available.</p>
+<h2 id="install-realsense-d435-camera">Install RealSense D435 camera</h2>
+<p><a href="https://github.com/acrobotic/Ai_Demos_RPi/wiki/Raspberry-Pi-4-and-Intel-RealSense-D435">Install RealSense D435 camera</a></p>
+<h2 id="install-opencv">Install opencv</h2>
+<p>The object detection example in the Coursera course used the RP-camera API. Therefore another application that uses opencv in order to attach to the D435 was used:</p>
+<p><a href="https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/TFLite_detection_webcam.py">TFLite_detection_webcam.py</a>
+Change the index of the /dev/videoXX device in order to select the camera</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">       self<span style="color:#f92672">.</span>stream <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>VideoCapture(<span style="color:#ae81ff">4</span>)
+</code></pre></div><p>After the installation of the camera, they appeared as /dev/video[10-14]. None of them did work, the device could not be connected.
+After unplugging the camera, they appeared as /dev/video[0-4]. Selecting index 4 selected the correct device.</p>
+<p>Here a small helper program to check the camera:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cv2
+cap <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>VideoCapture(<span style="color:#ae81ff">4</span>)
+<span style="color:#66d9ef">while</span> True:
+
+    ret, frame <span style="color:#f92672">=</span> cap<span style="color:#f92672">.</span>read()
+    cv2<span style="color:#f92672">.</span>imshow(<span style="color:#e6db74">&#39;frame&#39;</span>,frame)
+    <span style="color:#66d9ef">if</span> cv2<span style="color:#f92672">.</span>waitKey(<span style="color:#ae81ff">1</span>) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xFF</span> <span style="color:#f92672">==</span> ord(<span style="color:#e6db74">&#39;q&#39;</span>):
+        <span style="color:#66d9ef">break</span>
+
+cap<span style="color:#f92672">.</span>release()
+cv2<span style="color:#f92672">.</span>destroyAllWindows()
+</code></pre></div><h3 id="links">Links</h3>
+<p><a href="https://itnext.io/installing-tensorflow-2-3-0-for-raspberry-pi3-4-debian-buster-11447cb31fc4">TF2 on Buster</a>
+: Interesting blog, looks complete. Worthwile trying this for a next RP installation of TF</p>
+<p><a href="https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi">TF-lite using usb-camera</a>
+: Interesting to see how the author uses MSYS in order to build TF from source</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/raspberry-pi/" rel="tag">Raspberry Pi</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Rick avatar" src="/uploads/me.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Rick</span>
+	</div>
+	<div class="authorbox__description">
+		&hellip;
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/post/2021/02/22/emulating-rp-on-pc/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Emulating RP on Pc</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://rvhaasen.github.io/" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/2021/04/06/tensorflow-on-rp4/">Tensorflow on RP4</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/2021/02/22/emulating-rp-on-pc/">Emulating RP on Pc</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/2021/01/11/create_site/">Creating a website with Hugo</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/2021/01/07/assembling-a-prusa-3d-printer/">Assembling a Prusa 3D Printer</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/my-first-post/">Rabbit gone</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/deeplearning/">DeepLearning</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/domestic/">domestic</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/iot/">IoT</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/raspberry-pi/" title="Raspberry Pi">Raspberry Pi</a>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 A collection of things.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

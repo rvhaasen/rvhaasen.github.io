@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raspberry Pi on A collection of things</title>
+    <link>https://rvhaasen.github.io/tags/raspberry-pi/</link>
+    <description>Recent content in Raspberry Pi on A collection of things</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Apr 2021 17:09:24 +0000</lastBuildDate><atom:link href="https://rvhaasen.github.io/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tensorflow on RP4</title>
+      <link>https://rvhaasen.github.io/post/2021/04/06/tensorflow-on-rp4/</link>
+      <pubDate>Tue, 06 Apr 2021 17:09:24 +0000</pubDate>
+      
+      <guid>https://rvhaasen.github.io/post/2021/04/06/tensorflow-on-rp4/</guid>
+      <description>As part of the Coursera Specialization course on Tensorflow deployment, RP4 is used to demonstrate TF-lite. It it based on a somewhat older version of TF and other libraries, hence installing it on a fresh device took some effort. The object detection example asumed a RP-camera, which I did not have. I used an Intel Realsense D435 camera which required manual steps to install on the RP. There are many resources on the internet about installing TF2 on the PR, therefore I will not go into all details here, and focus on the tricky parts I bumped into.</description>
+    </item>
+    
+  </channel>
+</rss>
