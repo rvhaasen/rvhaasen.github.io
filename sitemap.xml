@@ -1,75 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://rvhaasen.github.io/</loc>
     <lastmod>2021-04-06T17:09:24+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rvhaasen.github.io/categories/</loc>
     <lastmod>2021-04-06T17:09:24+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rvhaasen.github.io/categories/deeplearning/</loc>
     <lastmod>2021-04-06T17:09:24+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rvhaasen.github.io/categories/iot/</loc>
     <lastmod>2021-04-06T17:09:24+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rvhaasen.github.io/post/</loc>
     <lastmod>2021-04-06T17:09:24+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rvhaasen.github.io/tags/raspberry-pi/</loc>
     <lastmod>2021-04-06T17:09:24+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rvhaasen.github.io/tags/</loc>
     <lastmod>2021-04-06T17:09:24+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rvhaasen.github.io/post/2021/04/06/tensorflow-on-rp4/</loc>
     <lastmod>2021-04-06T17:09:24+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rvhaasen.github.io/post/2021/02/22/emulating-rp-on-pc/</loc>
     <lastmod>2021-02-22T10:51:44+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rvhaasen.github.io/post/2021/01/11/create_site/</loc>
     <lastmod>2021-01-11T16:00:09+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rvhaasen.github.io/post/2021/01/07/assembling-a-prusa-3d-printer/</loc>
     <lastmod>2021-01-07T17:22:49+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rvhaasen.github.io/categories/domestic/</loc>
     <lastmod>2021-01-06T13:15:20+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rvhaasen.github.io/post/my-first-post/</loc>
     <lastmod>2021-01-06T13:15:20+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rvhaasen.github.io/about/</loc>
     <lastmod>2021-01-04T22:17:00+00:00</lastmod>
   </url>
-  
 </urlset>
