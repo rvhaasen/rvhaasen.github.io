@@ -64,6 +64,21 @@
 	<article class="list__item post">
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/post/2021/05/11/solving-backspace-problem-in-ssh-client/" rel="bookmark">
+			Solving Backspace Problem in SSH Client
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-05-11T15:17:15Z">May 11, 2021</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		When using SSH you may run into the &lsquo;backspace problem&rsquo;, effectively not being able to erase characters. Until recent, I could solve this problem by setting the terminal environment-variable. This however did not work the last time, and I had to find another solution. This blog describes how I solved it.
+First step is to get the termaps. In my case, these were not available and I had to install them first.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/post/2021/04/06/tensorflow-on-rp4/" rel="bookmark">
 			Tensorflow on RP4
 			</a>
@@ -157,11 +172,11 @@ For almost 10 year our rabbit was part of the family. It survived two marter att
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/2021/05/11/solving-backspace-problem-in-ssh-client/">Solving Backspace Problem in SSH Client</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/2021/04/06/tensorflow-on-rp4/">Tensorflow on RP4</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/2021/02/22/emulating-rp-on-pc/">Emulating RP on Pc</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/2021/01/11/create_site/">Creating a website with Hugo</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/2021/01/07/assembling-a-prusa-3d-printer/">Assembling a Prusa 3D Printer</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/my-first-post/">Rabbit gone</a></li>
 		</ul>
 	</div>
 </div>
@@ -184,6 +199,7 @@ For almost 10 year our rabbit was part of the family. It survived two marter att
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/linux/" title="Linux">Linux</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/raspberry-pi/" title="Raspberry Pi">Raspberry Pi</a>
 	</div>
 </div>

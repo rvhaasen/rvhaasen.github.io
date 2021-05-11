@@ -6,7 +6,17 @@
     <description>Recent content in Posts on A collection of things</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Apr 2021 17:09:24 +0000</lastBuildDate><atom:link href="https://rvhaasen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 May 2021 15:17:15 +0000</lastBuildDate><atom:link href="https://rvhaasen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solving Backspace Problem in SSH Client</title>
+      <link>https://rvhaasen.github.io/post/2021/05/11/solving-backspace-problem-in-ssh-client/</link>
+      <pubDate>Tue, 11 May 2021 15:17:15 +0000</pubDate>
+      
+      <guid>https://rvhaasen.github.io/post/2021/05/11/solving-backspace-problem-in-ssh-client/</guid>
+      <description>When using SSH you may run into the &amp;lsquo;backspace problem&amp;rsquo;, effectively not being able to erase characters. Until recent, I could solve this problem by setting the terminal environment-variable. This however did not work the last time, and I had to find another solution. This blog describes how I solved it.
+First step is to get the termaps. In my case, these were not available and I had to install them first.</description>
+    </item>
+    
     <item>
       <title>Tensorflow on RP4</title>
       <link>https://rvhaasen.github.io/post/2021/04/06/tensorflow-on-rp4/</link>
